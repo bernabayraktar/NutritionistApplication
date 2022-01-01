@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.ListView?>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.ui.Controllers.PatientController">
+    <children>
+        <MenuBar prefHeight="67.0" prefWidth="640.0" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem mnemonicParsing="false" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="28.0" prefWidth="640.0" VBox.vgrow="ALWAYS" />
+        <TabPane prefHeight="421.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Diyet Bilgisi">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="37.0" layoutY="37.0" text="Pazartesi" />
+                                <Label layoutX="138.0" layoutY="37.0" text="Salı" />
+                                <Label layoutX="208.0" layoutY="37.0" text="Çarşamba" />
+                                <Label layoutX="294.0" layoutY="37.0" text="Perşembe" />
+                                <Label layoutX="392.0" layoutY="37.0" text="Cuma" />
+                                <Label layoutX="468.0" layoutY="37.0" text="Cumartesi" />
+                                <Label layoutX="568.0" layoutY="37.0" text="Pazar" />
+                                <TextArea fx:id="pazartesi" layoutX="17.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="sali" layoutX="103.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="carsamba" layoutX="190.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="persembe" layoutX="276.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="cuma" layoutX="364.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="cumartesi" layoutX="451.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                                <TextArea fx:id="pazar" layoutX="538.0" layoutY="67.0" prefHeight="200.0" prefWidth="87.0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Profil">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Label layoutX="52.0" layoutY="20.0" text="İsim:" />
+                                <Label layoutX="35.0" layoutY="57.0" text="Soyisim:" />
+                                <Label layoutX="35.0" layoutY="89.0" text="Hastalık:" />
+                                <Label layoutX="49.0" layoutY="125.0" text="Diyet:" />
+                                <Label layoutX="24.0" layoutY="156.0" text="Diyetisyen:" />
+                                <Label fx:id="lblName" layoutX="90.0" layoutY="20.0" text="Label" />
+                                <Label fx:id="lblSurname" layoutX="90.0" layoutY="57.0" text="Label" />
+                                <Label fx:id="lblDisease" layoutX="90.0" layoutY="89.0" text="Label" />
+                                <Label fx:id="lblDiet" layoutX="90.0" layoutY="125.0" text="Label" />
+                                <Label fx:id="lblNutritionist" layoutX="90.0" layoutY="156.0" text="Label" />
+                                <Label fx:id="lblNutrSurname" layoutX="127.0" layoutY="156.0" text="Label" />
+                                <TextArea layoutX="18.0" layoutY="225.0" prefHeight="107.0" prefWidth="602.0" text="NOTLAR !!!&#10;- Yaklaşık 2L su içilmeli.&#10;- Her gün 45 dk yürüme/egzersiz&#10;&#10;" />
+                                <Label layoutX="408.0" layoutY="32.0" text="Şifre Değiştir" />
+                                <Separator layoutX="189.0" layoutY="13.0" orientation="VERTICAL" prefHeight="212.0" prefWidth="6.0" />
+                                <Label layoutX="287.0" layoutY="77.0" text="Mevcut Şifre:" />
+                                <Label layoutX="304.0" layoutY="109.0" text="Yeni Şifre:" />
+                                <TextField layoutX="367.0" layoutY="73.0" />
+                                <TextField layoutX="367.0" layoutY="105.0" />
+                                <Button layoutX="432.0" layoutY="155.0" mnemonicParsing="false" text="Şifre Değiştir" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
